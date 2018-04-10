@@ -15,7 +15,8 @@ public class Sender {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		final long timeInterval = 100;
+		final long timeIntervalForInsert = 100;
+		final long timeIntervalForSelect = 1000;
 		
 		Random random = new Random();
 		
@@ -40,7 +41,7 @@ public class Sender {
 				dc.ConnectDB(randomNumber, useFor);
 				
 				try {
-					Thread.sleep(timeInterval);
+					Thread.sleep(timeIntervalForInsert);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
@@ -97,6 +98,12 @@ public class Sender {
 						}
 								
 					} catch (Throwable e) {
+						e.printStackTrace();
+					}
+					
+					try {
+						Thread.sleep(timeIntervalForSelect);
+					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
 				}

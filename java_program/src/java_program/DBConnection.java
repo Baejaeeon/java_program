@@ -96,6 +96,7 @@ public class DBConnection {
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, randomNumber.getRandom_number_id());
 			ResultSet result = pstmt.executeQuery();
 			
 			while(result.next()) {
