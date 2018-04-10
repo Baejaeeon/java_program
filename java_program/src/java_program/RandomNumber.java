@@ -12,6 +12,8 @@ public class RandomNumber implements Serializable {
 	
 	private List<RandomNumber> random_number_list; // 리스트
 	
+	private Integer backup_count;			// 백업 개수
+	
 	public Integer getRandom_number_id() {
 		return random_number_id;
 	}
@@ -35,6 +37,12 @@ public class RandomNumber implements Serializable {
 	}
 	public void setRandom_number_list(List<RandomNumber> random_number_list) {
 		this.random_number_list = random_number_list;
+	}
+	public Integer getBackup_count() {
+		return backup_count;
+	}
+	public void setBackup_count(Integer backup_count) {
+		this.backup_count = backup_count;
 	}
 	
 }
