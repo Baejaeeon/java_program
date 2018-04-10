@@ -79,8 +79,6 @@ public class Sender {
 							// 클라이언트로 부터 ID 값 받아오기
 							int random_number_id = ((RandomNumber) receiver.readObject()).getRandom_number(); // 수신
 							
-							System.out.println(random_number_id);
-							
 							RandomNumber randomNumber = new RandomNumber();
 							randomNumber.setRandom_number_id(random_number_id);
 							
