@@ -6,11 +6,13 @@ import java.util.List;
 
 public class RandomNumber implements Serializable {
 
-	private Integer random_number_id;		// ?‹ë³„ì ID
-	private Integer random_number;			// ?œ?¤ ë²ˆí˜¸
-	private Timestamp registered_datetime;	// ?“±ë¡? ?¼?‹œ
+	private Integer random_number_id;		// ID
+	private Integer random_number;			// ·£´ı ¹øÈ£
+	private Timestamp registered_datetime;	// µî·ÏÀÏ½Ã
 	
-	private List<RandomNumber> random_number_list; // ?œ?¤ ë²ˆí˜¸ ëª©ë¡
+	private List<RandomNumber> random_number_list; // ¸®½ºÆ®
+	
+	private Integer backup_count;			// ¹é¾÷ °³¼ö
 	
 	public Integer getRandom_number_id() {
 		return random_number_id;
@@ -35,6 +37,12 @@ public class RandomNumber implements Serializable {
 	}
 	public void setRandom_number_list(List<RandomNumber> random_number_list) {
 		this.random_number_list = random_number_list;
+	}
+	public Integer getBackup_count() {
+		return backup_count;
+	}
+	public void setBackup_count(Integer backup_count) {
+		this.backup_count = backup_count;
 	}
 	
 }
